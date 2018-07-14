@@ -19,6 +19,12 @@ const accountCTRL = require(path.join(
 accountRouter.get("/login", accountCTRL.getLoginPage);
 // 验证请求
 accountRouter.get("/vcode", accountCTRL.getVcode);
+// 注册请求
+accountRouter.get("/register",accountCTRL.getRegister)
+// 处理注册请求
+accountRouter.post("/register", accountCTRL.register);
+// 处理登录的请求
+accountRouter.post('/login', accountCTRL.login)
 
 // 导出模块
 module.exports = accountRouter;
